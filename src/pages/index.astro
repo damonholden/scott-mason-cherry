@@ -3,75 +3,75 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title='Welcome to Astro.'>
 	<main>
-		<h1>Hi I'm <span class="text-gradient">Scott Mason Cherry</span></h1>
-		<ul role="list" class="link-card-grid">
+		<div class='landing'>
+			<h1>Hi. I'm Scott Mason Cherry</h1>
+			<p class='sub'>Mr performer.</p>
+		</div>
+		<ul
+			role='list'
+			class='link-card-grid'
+		>
 			<Card
-				href="https://docs.astro.build/"
-				title="About me"
-				body="Learn more about me."
+				href=''
+				title='About me'
+				body='Learn more about me.'
 			/>
 			<Card
-				href="https://astro.build/integrations/"
-				title="My work"
-				body="See my work and projects."
+				href=''
+				title='My work'
+				body='See my work and projects.'
 			/>
 			<Card
-				href="https://astro.build/themes/"
-				title="The CV"
-				body="See my resume."
+				href=''
+				title='The CV'
+				body='See my resume.'
 			/>
 			<Card
-				href="https://astro.build/chat/"
-				title="Connect with me"
-				body="lets talk business."
+				href=''
+				title='Connect with me'
+				body='lets talk business.'
 			/>
 		</ul>
 	</main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
 	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
+		font-size: 70px;
+		margin-bottom: 0;
+		color: azure;
+		text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+
+	.sub {
+		font-size: 30px;
+		margin-top: 0;
+		color: azure;
+		text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
 	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
+
+	.landing {
+		background-image: url(../images/headshot-removebg.png);
+		background-color: #e8cee4;
+		height: 100vh;
+		background-repeat: no-repeat;
+		background-position: right;
+		background-size: contain;
+		overflow: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		margin: -8px -8px 0 -8px;
+		padding: 8px 8px 0 8px;
 	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+
+	@media (max-width: 800px) {
+		.landing {
+			background-position: center;
+			background-size: cover;
+		}
 	}
 </style>
